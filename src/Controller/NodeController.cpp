@@ -6,17 +6,23 @@
  */
 
 #include "NodeController.h"
+#include "../Model/Node.h"
+#include <iostream>
 
-NodeController::NodeController() {
+using namespace std;
+
+NodeController::NodeController()
+{
 	// TODO Auto-generated constructor stub
 
 }
 
-NodeController::~NodeController() {
+NodeController::~NodeController()
+{
 	// TODO Auto-generated destructor stub
 }
 
-void NodeController :: start();
+void NodeController :: start()
 {
 
 }
