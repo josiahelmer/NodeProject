@@ -16,15 +16,13 @@ class NodeController
 	private:
 		Node<string> stringNode;
 		Node<int> intNode;
+		ArrayNode<string> stringArrayNode;
+		ArrayNode<string>;
 	public:
 		NodeController();
+		virtual ~NodeController();
+		void start();
+};
 
-};
-{
-public:
-	NodeController();
-	virtual ~NodeController();
-	void start();
-};
 
 #endif /* CONTROLLER_NODECONTROLLER_H_ */
