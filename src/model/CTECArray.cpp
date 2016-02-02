@@ -49,6 +49,7 @@ Type* CTECArray<Type> :: get(int position)
 			}
 			else
 			{
+				return current->getvalue();
 
 			}
 		}
@@ -58,6 +59,26 @@ Type* CTECArray<Type> :: get(int position)
 template <class Type>
 void CTECArray<Type> ::set(int position, Type value)
 {
-
+	if(position >= size || position < 0)
+	{
+		//I am out of bonds and need to do something about it
+		cerr << "position value is out of bounds" << endl;
+	}
+	else
+	{
+		//I am in bounds so I am inclusive
+		ArrayNode<Type> * current = head;
+		for (int spot = 0; spot < position; spot++)
+		{
+			if (spot != position)
+			{
+				current = current->getNext();
+			}
+			else
+			{
+				current->setValue(value);
+			}
+		}
+	}
 }
 
