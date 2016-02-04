@@ -41,7 +41,24 @@ CTECArray<Type>::CTECArray(int size)
 template <class Type>
 CTECArray<Type>::~CTECArray()
 {
+	ArrayNode<Type> * deleteMe = head;
+	for(int index = 0; index < size; index++)
+	{
+		if(deleteMe->getNext() != nullptr)
+		{
+			head = deleteMe->getNext();
+			deleteMe->setNext(nullptr);
+			delete deleteMe;
+			deleteMe = head;
+		}
+		else
+		{
+			delete deleteMe;
+			deleteMe = head;
+		}
+	}
 
+	delete head;
 }
 
 template<class Type>
@@ -56,7 +73,7 @@ Type* CTECArray<Type> :: get(int position)
 	// We need to do bounds checking so we do not crash the program
 	if(position >= size || position < 0)
 	{
-		//I am out of bounds nd need to do something about it.
+		//I am out of bounds and need to do something about it.
 		cerr << "position value is out og bounds" << endl;
 		return nullptr;
 	}
