@@ -20,7 +20,7 @@ public:
 	Node(Type value);  //Creates with a starting value
 	virtual ~Node();
 	Type getValue();
-	void setValue(Type value);
+	void setValue(const Type value);
 	Node * getPointers();
 };
 

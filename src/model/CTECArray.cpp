@@ -101,7 +101,7 @@ void CTECArray<Type> ::set(int position, Type value)
 {
 	if(position >= size || position < 0)
 	{
-		//I am out of bonds and need to do something about it
+		//I am out of bounds and need to do something about it
 		cerr << "position value is out of bounds" << endl;
 	}
 	else
