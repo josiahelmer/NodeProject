@@ -18,7 +18,7 @@ private:
 	Node * pointers; //Reference to the array of nodes this is connected to.
 public:
 	Node();
-	Node(Type value);  //Creates with a starting value
+	Node(const Type& value);  //Creates with a starting value
 	virtual ~Node();
 	Type getValue();
 	void setValue(const Type& value);

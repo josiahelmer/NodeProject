@@ -11,7 +11,7 @@
 template <class Type>
 ArrayNode<Type>::ArrayNode()  : Node<Type>()
 {
-	this->nest = nullptr;
+	this->next = nullptr;
 	this->pointers = nullptr;
 
 }
