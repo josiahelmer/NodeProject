@@ -35,7 +35,7 @@ Type Node<Type> :: getValue()
 template <class Type>
 void Node<Type> :: setValue(const Type& value)
 {
-
+	this ->value = value;
 }
 
 template <class Type>

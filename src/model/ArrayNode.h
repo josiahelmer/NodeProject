@@ -15,6 +15,7 @@ class ArrayNode: public Node<Type>
 {
 private:
 	ArrayNode * next;
+
 public:
 	ArrayNode();
 	ArrayNode(const Type& value);
@@ -22,6 +23,7 @@ public:
 	virtual ~ArrayNode();
 	ArrayNode * getNext();
 	void setNext(ArrayNode * next);
+
 };
 
 #endif /* MODEL_ARRAYNODE_H_ */
