@@ -97,7 +97,7 @@ Type* CTECArray<Type> :: get(int position)
 }
 
 template <class Type>
-void CTECArray<Type> ::set(int position, Type value)
+void CTECArray<Type> ::set(int position, const Type& value)
 {
 	if(position >= size || position < 0)
 	{
@@ -116,7 +116,7 @@ void CTECArray<Type> ::set(int position, Type value)
 			}
 			else
 			{
-				current->setValue(value);
+				return current->setValue(value);
 			}
 		}
 	}
