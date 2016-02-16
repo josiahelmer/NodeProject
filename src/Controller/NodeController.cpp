@@ -18,11 +18,13 @@ NodeController::NodeController()
 
 NodeController::~NodeController()
 {
-	// TODO Auto-generated destructor stub
+
 }
 
 void NodeController :: start()
+
 {
+	arrayTimer.startTimer();
 	for(int index = 0; index < notHipsterInts->getSize(); index++)
 	{
 		notHipsterInts->set(index,  (index * 23));
@@ -32,4 +34,7 @@ void NodeController :: start()
 	{
 		cout << "The contents of the notHipsterInts array node" << index << " are:" << notHipsterInts->get(index) << endl;
 	}
+
+	arrayTimer.stopTimer();
+	arrayTimer.displayTimerInformation();
 }

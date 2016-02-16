@@ -8,15 +8,22 @@
 #ifndef CONTROLLER_NODECONTROLLER_H_
 #define CONTROLLER_NODECONTROLLER_H_
 
+#include <iostream>
+#include <string>
+
 #include "../Model/Node.cpp"
 #include "../Model/ArrayNode.cpp"
 #include "../Model/CTECArray.cpp"
-#include <string>
+#include "../Model/Timer.h"
+
+
+using namespace std;
 
 class NodeController
 {
 	private:
 	CTECArray<int> * notHipsterInts;
+	Timer arrayTimer;
 	public:
 		NodeController();
 		virtual ~NodeController();
