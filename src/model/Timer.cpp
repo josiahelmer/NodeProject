@@ -13,7 +13,6 @@ using namespace std;
 Timer::Timer()
 {
 	executionTime = 0;
-
 }
 Timer::~Timer()
 {
