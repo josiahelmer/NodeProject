@@ -8,10 +8,17 @@
 #ifndef MODEL_CTECLIST_H_
 #define MODEL_CTECLIST_H_
 
-class CTECList {
+#include <iostream>
+template <class Type>
+class CTECList
+{
+private:
+	int: size;
+	head
 public:
 	CTECList();
 	virtual ~CTECList();
+	Type removeFromFront();
 };
 
 #endif /* MODEL_CTECLIST_H_ */

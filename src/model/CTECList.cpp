@@ -24,12 +24,18 @@ CTECList<Type>::~CTECList()
 template<class Type>
 Type CTECList<Type> :: removeFromFront()
 {
-//find the next spot.
-	ArrayNode<Type> * newHead = new ArrayNode<Type>();
-	newHead = head->getNext();
-//Remove head
-	delete head;
-//Move head to next spot
-	head = newHead;
-}
+	//Check that not removing from an empty list
+	assert(this->size > 0);
 
+	//Declare an variable of the type to return
+	Type thingToRemove;
+	//Create a pointer to what is after head.
+	ArrayNode<Type> * newHead = new ArrayNode<Type>();
+	newHead = this->head->getNext();
+	//Get what head is holding!!!
+	thingToRemove + this->head->getValue();
+	//Remove head
+	delete this->head;
+	//Move head to next spot
+	this->head = newHead;
+}
