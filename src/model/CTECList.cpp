@@ -39,3 +39,34 @@ Type CTECList<Type> :: removeFromFront()
 	//Move head to next spot
 	this->head = newHead;
 }
+
+template <class Type>
+Type CTECList<Type> :: removeFromIndex(int index)
+{
+	//Check that not removing
+	assert( this->size > 0);
+
+	assert(index >= 0 && index < size);
+
+	Type thingToRemove;
+
+	ArrayNode<Type> * preivious, deleteMe , newsNext;
+
+	if(index == 0)
+	{
+		thingToRemove = removeFromFront();
+	}
+	else if(index == size-1)
+	{
+		thingToRemove = removeFromEnd();
+	}
+	else
+	{
+		for(int spot = 0; spot < index+1; spot++)
+		{
+
+		}
+	}
+
+}
+
