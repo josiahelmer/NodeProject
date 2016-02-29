@@ -8,7 +8,7 @@
 #ifndef MODEL_CTECLIST_H_
 #define MODEL_CTECLIST_H_
 
-#include "ArrayNode.h""
+#include "ArrayNode.h"
 
 
 template <class Type>
@@ -18,6 +18,7 @@ private:
 	int  size;
 	ArrayNode<Type> * head;
 	ArrayNode<Type> * end;
+	void calculateSize();
 
 public:
 	CTECList();
@@ -25,6 +26,7 @@ public:
 	Type removeFromFront();
 	Type removeFromEnd();
 	int getSize();
+
 	void addToFront(const Type& value);
 	void addToEnd(const Type& value);
 	void addAtIndex(int index, const Type& value);
