@@ -18,11 +18,7 @@ template<class Type>
 CTECList<Type>::~CTECList()
 {
 
-
 }
-
-
-
 template<class Type>
 Type CTECList<Type> :: removeFromFront()
 {
@@ -47,20 +43,44 @@ Type CTECList<Type> :: removeFromFront()
 template<class Type>
 Type CTECList<Type> :: removeFromEnd()
 {
-	assert(this->size > 0);
+	/**
+	 * Check size  valid
+	 * Create a return variable
+	 * Loop until the next to last node
+	 * grab the value from the last node
+	 * delete the last node
+	 * set new last node as the end
+	 */
+	assert(size>0);
 
-	Type endToRemove;
+	Type returnvalue;
 
-	ArrayNode<Type> * newEnd = new ArrayNode<Type>();
-	newEnd = this->end->getNext();
+	if(size == 1)
+	{
+		ArrayNode<Type> * toRemove = end;
+		returnvalue = removeFromFront();
+		end = nullptr;
+		head = nullptr;
+		delete toRemove;
+	}
+	else
+	{
+		ArrayNode<Type> * current = head;
+		for(int index = 0; index < size - 1; index++)
+		{
+			current = current->getNext();
+		}
 
-	endToRemove + this->head->getvalue();
+	returnvalue = end->getValue();
+	delete end;
+	current = end;
+	current->setNext(nullptr);
 
-	delete this->end;
 
-	this->end = newEnd;
+	}
+	calculateSize();
 
-	return endToRemove;
+	return returnvalue;
 
 }
 
@@ -126,6 +146,16 @@ void CTECList<Type> :: calculateSize()
 
 template <class Type>
 void addToFront(const Type& value)
+{
+
+}
+template <class Type>
+void addToEnd(const Type& value)
+{
+
+}
+template <class Type>
+void addAtIndex(const Type& value)
 {
 
 }
