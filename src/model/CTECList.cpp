@@ -95,7 +95,7 @@ Type CTECList<Type> :: removeFromIndex(int index)
 
 	Type thingToRemove;
 
-	ArrayNode<Type> * preivious, deleteMe , newsNext;
+	ArrayNode<Type> * previous, deleteMe , newsNext;
 
 	if(index == 0)
 	{
@@ -156,6 +156,21 @@ void addToEnd(const Type& value)
 }
 template <class Type>
 void addAtIndex(const Type& value)
+{
+
+}
+template <class Type>
+Type CTECList<Type> :: getFront()
+{
+
+}
+template <class Type>
+Type CTECList<Type> :: getEnd()
+{
+
+}
+template <class Type>
+Type CTECList<Type> :: getFromIndex(int index)
 {
 
 }

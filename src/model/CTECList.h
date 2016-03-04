@@ -32,7 +32,7 @@ public:
 	void addAtIndex(int index, const Type& value);
 	Type getFront();
 	Type getEnd();
-	Type getFronIndex(int index);
+	Type getFromIndex(int index);
 	Type removeFromIndex(int index);
 	Type set(int index, const Type& value);
 
