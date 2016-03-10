@@ -14,6 +14,7 @@
 #include "../Model/Node.cpp"
 #include "../Model/ArrayNode.cpp"
 #include "../Model/CTECArray.cpp"
+#include "../Model/CTECList.cpp"
 #include "../Model/Timer.h"
 
 
@@ -23,7 +24,9 @@ class NodeController
 {
 	private:
 	CTECArray<int> * notHipsterInts;
+	CTECList<int> * numbers;
 	Timer arrayTimer;
+	void testLists();
 	public:
 		NodeController();
 		virtual ~NodeController();
