@@ -172,5 +172,12 @@ Type CTECList<Type> :: getEnd()
 template <class Type>
 Type CTECList<Type> :: getFromIndex(int index)
 {
+	assert(this->size > 0);
+
+	assert(index >= 0 && index < size);
+
+
+
+
 
 }
